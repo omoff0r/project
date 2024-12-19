@@ -15,10 +15,6 @@ const deployContract: DeployFunction = async (env: HardhatRuntimeEnvironment) =>
     log: true,      
   });
 
-  // Инициализация экземпляра контракта после развертывания
-  const contractInstance = await env.ethers.getContract<VotingContract>("VotingContract", deployer);
-
-};
 
 // Экспортируем функцию для использования в командных скриптах Hardhat
 export default deployContract;
